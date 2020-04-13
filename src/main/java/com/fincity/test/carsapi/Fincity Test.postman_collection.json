@@ -1,0 +1,260 @@
+{
+	"id": "185bb07d-e3e2-4ff8-b745-1cc5755d6eb9",
+	"name": "Fincity Test",
+	"description": "CARS API\n\n#Introduction\n--> To perform crud operations on CAR model\n\n\n#Authentication\n--> Using Basic Authentication\n\n\n#Error Codes\n--> Expected error codes: 200,201,204,400,401,404,500\n\n\n ",
+	"auth": null,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "28e29b86-a668-492b-9af3-29fbd51fcb63",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2d404f6f-26f8-442d-ade9-32367b1fb433",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [],
+	"order": [
+		"e61eb833-1b6c-43a9-837a-d40d7f7bbaa8",
+		"aad34871-011e-4123-bae5-22692ac292bd",
+		"3dbdfbc1-bcea-405b-803c-4d243781eb31",
+		"949708a7-4da5-4e41-9fc0-8071a3769094",
+		"eb97f1de-0fbe-48cf-b25f-a9f68554c5b1",
+		"bfb58b57-f785-4ee9-8c54-5b2707ee8900",
+		"2e0dad61-180c-4c7d-b076-fc81d5d3ae25",
+		"3489eb43-ca48-4ea2-9746-2c3da768f9ac"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "2e0dad61-180c-4c7d-b076-fc81d5d3ae25",
+			"name": "Register User",
+			"url": "localhost:8080/register",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"userName\":\"gaurav\",\n\t\"password\":\"gaurav33\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3489eb43-ca48-4ea2-9746-2c3da768f9ac",
+			"name": "Login User",
+			"url": "localhost:8080/login",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"userName\":\"gaurav\",\n\t\"password\":\"gaurav33\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3dbdfbc1-bcea-405b-803c-4d243781eb31",
+			"name": "Delete Car ",
+			"url": "localhost:8080/cars/1",
+			"description": "Delete car object from the database using id",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "949708a7-4da5-4e41-9fc0-8071a3769094",
+			"name": "POST Car",
+			"url": "localhost:8080/cars/1",
+			"description": "Create a car object in the database providing the car model request payload",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"name\":\"Swift\",\n\t\"manufactureName\": \"Maruti\",\n\t\"model\": \"vlsi\",\n\t\"manufactureYear\": \"2020\",\n\t\"color\": \"Black\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "aad34871-011e-4123-bae5-22692ac292bd",
+			"name": "Get a CAR",
+			"url": "localhost:8080/cars/1",
+			"description": "Retrieve a car object from the database using id",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "bfb58b57-f785-4ee9-8c54-5b2707ee8900",
+			"name": "Update CAR",
+			"url": "localhost:8080/cars/3",
+			"description": "update Car by providing new request payload of car object by using respective car id to update",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\n\t\"manufactureName\": \"Maruti\"\n\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e61eb833-1b6c-43a9-837a-d40d7f7bbaa8",
+			"name": "Get All CARS",
+			"url": "localhost:8080/cars",
+			"description": "Retrieve all cars from the database",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"basic": [
+					{
+						"key": "password",
+						"value": "password",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "username",
+						"type": "string"
+					}
+				],
+				"type": "basic"
+			},
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"name\":\"Swift\",\n\t\"manufactureName\": \"Maruti\",\n\t\"model\": \"vlsi\",\n\t\"manufactureYear\": \"2020\",\n\t\"color\": \"Black\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "eb97f1de-0fbe-48cf-b25f-a9f68554c5b1",
+			"name": "Search Car by name, year, model, color, manufactureName",
+			"url": "localhost:8080/cars/search?name=Swift&manufactureName=Maruti&model=vlsi&manufactureYear=2020&color=White",
+			"description": "Retrieve list of car details using any combination of fields in params",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "Swift",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "manufactureName",
+					"value": "Maruti",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "model",
+					"value": "vlsi",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "manufactureYear",
+					"value": "2020",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "color",
+					"value": "White",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}

@@ -1,0 +1,157 @@
+{
+	"id": "1cb879c2-b453-d707-d026-bcaa690cb4dc",
+	"name": "Fincity Test",
+	"description": "",
+	"order": [
+		"e5f8e0bc-3b75-82d4-b308-a9b933470c08",
+		"273bcd74-871f-5548-97b1-b257b124195e",
+		"9baa38e0-2c45-09d0-6d90-6fa5e2cb2681",
+		"dce8a45f-9a13-ddae-0a7a-b2200509cda1",
+		"9572b1d2-802f-556e-7c0b-373ecd01b8e5",
+		"ff8da74d-4a5c-c0ca-d4bb-529737011bdb"
+	],
+	"folders_order": [],
+	"folders": [],
+	"owner": 0,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "273bcd74-871f-5548-97b1-b257b124195e",
+			"name": "Get a Car Object",
+			"description": "Get Car Details By Id",
+			"collectionId": "1cb879c2-b453-d707-d026-bcaa690cb4dc",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "params",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:8080/cars/1",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "1cb879c2-b453-d707-d026-bcaa690cb4dc"
+		},
+		{
+			"id": "9572b1d2-802f-556e-7c0b-373ecd01b8e5",
+			"name": "Search by name, year, model, color, manufactureName",
+			"description": "any of these parameter can be selected",
+			"collectionId": "1cb879c2-b453-d707-d026-bcaa690cb4dc",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "params",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:8080/cars/search?name=Swift&manufactureName=Maruti&model=vlsi&manufactureYear=2020&color=White",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "Swift"
+				},
+				{
+					"key": "manufactureName",
+					"value": "Maruti"
+				},
+				{
+					"key": "model",
+					"value": "vlsi"
+				},
+				{
+					"key": "manufactureYear",
+					"value": "2020"
+				},
+				{
+					"key": "color",
+					"value": "White"
+				}
+			],
+			"headerData": [],
+			"collection_id": "1cb879c2-b453-d707-d026-bcaa690cb4dc"
+		},
+		{
+			"id": "9baa38e0-2c45-09d0-6d90-6fa5e2cb2681",
+			"name": "Delete Car ",
+			"description": "Delete Car Details By Id",
+			"collectionId": "1cb879c2-b453-d707-d026-bcaa690cb4dc",
+			"method": "DELETE",
+			"headers": "",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:8080/cars/1",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "1cb879c2-b453-d707-d026-bcaa690cb4dc"
+		},
+		{
+			"id": "dce8a45f-9a13-ddae-0a7a-b2200509cda1",
+			"name": "Create Car Object",
+			"description": "Create Car API",
+			"collectionId": "1cb879c2-b453-d707-d026-bcaa690cb4dc",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"name\":\"Swift\",\n\t\"manufactureName\": \"Maruti\",\n\t\"model\": \"vlsi\",\n\t\"manufactureYear\": \"2020\",\n\t\"color\": \"Black\"\n}",
+			"url": "localhost:8080/cars/1",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"collection_id": "1cb879c2-b453-d707-d026-bcaa690cb4dc"
+		},
+		{
+			"id": "e5f8e0bc-3b75-82d4-b308-a9b933470c08",
+			"name": "Get all cars",
+			"description": "Get ALL cars",
+			"collectionId": "1cb879c2-b453-d707-d026-bcaa690cb4dc",
+			"method": "GET",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"name\":\"Swift\",\n\t\"manufactureName\": \"Maruti\",\n\t\"model\": \"vlsi\",\n\t\"manufactureYear\": \"2020\",\n\t\"color\": \"Black\"\n}",
+			"url": "localhost:8080/cars/",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"collection_id": "1cb879c2-b453-d707-d026-bcaa690cb4dc"
+		},
+		{
+			"id": "ff8da74d-4a5c-c0ca-d4bb-529737011bdb",
+			"name": "Update car API",
+			"description": "update car object by providing Car object request Payload",
+			"collectionId": "1cb879c2-b453-d707-d026-bcaa690cb4dc",
+			"method": "PUT",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\n\t\"manufactureName\": \"Maruti\"\n\n}",
+			"url": "localhost:8080/cars/3",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"collection_id": "1cb879c2-b453-d707-d026-bcaa690cb4dc"
+		}
+	]
+}
